@@ -1,1 +1,121 @@
-site_name: My Docs
+# Базовая информация о сайте
+site_name: "База знаний компании"
+site_description: "Внутренний портал с инструкциями, стандартами и практиками"
+# site_url можно заполнить после выбора домена
+site_url: "https://knowledge.example.com"
+site_author: "Команда техписателей"
+
+# Настройки темы Material
+theme:
+  name: material
+  language: ru
+  features:
+    # Быстрая иерархическая навигация
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    # Удобный оглавление в тексте
+    - toc.integrate
+    # Улучшенный поиск и копирование кода
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    # Дополнительные возможности интерфейса
+    - announce.dismiss
+    - navigation.footer
+  palette:
+    # Светлая тема по умолчанию
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Переключиться на тёмную тему
+    # Тёмная тема для комфортного чтения
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Переключиться на светлую тему
+  icon:
+    repo: fontawesome/brands/git-alt
+
+# Навигация и структура страниц
+nav:
+  - "Обзор": index.md
+  - "Структура проекта": guides/structure.md
+  - "Конфигурация": guides/configuration.md
+  - "Плагины и расширения": guides/plugins.md
+  - "Контент и навигация": guides/content.md
+  - "Примеры Material": guides/material-examples.md
+
+# Плагины для функционала и метаданных
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      fallback_to_build_date: true
+  - glightbox
+  - section-index
+
+# Markdown-расширения для улучшения верстки
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+
+# Дополнительные ресурсы
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
+
+extra:
+  tags:
+    # Включаем вывод тегов на страницах
+    enabled: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/company
+      name: Репозиторий компании
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/example
+      name: LinkedIn
+
+# Путь к статичным файлам (изображения, вложения)
+# В корне docs/ можно создать каталоги assets/ и attachments/
+
+# Параметры поиска и производительности
+use_directory_urls: true
