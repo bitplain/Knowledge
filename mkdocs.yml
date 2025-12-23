@@ -65,7 +65,6 @@ plugins:
       enable_creation_date: true
       type: datetime
       fallback_to_build_date: true
-  - section-index
 
 # Markdown-расширения для улучшения верстки
 markdown_extensions:

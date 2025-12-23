@@ -44,7 +44,6 @@ plugins:
       enable_creation_date: true
       type: datetime          # отображать дату и время
       fallback_to_build_date: true
-  - section-index             # файлы index.md для разделов
 
 markdown_extensions:
   - admonition
@@ -79,5 +78,5 @@ extra_css:
 ## Производительность и поддерживаемость
 
 - Используйте `navigation.instant` и `search.suggest` для ускорения работы на клиенте; при большом количестве страниц регулярно прогоняйте `mkdocs build` для контроля размера итогового бандла.
-- Следите, чтобы указанные плагины были установлены в окружении (`pip install mkdocs-material mkdocs-section-index mkdocs-git-revision-date-localized-plugin`).
+- Следите, чтобы указанные плагины были установлены в окружении (`pip install mkdocs-material mkdocs-git-revision-date-localized-plugin`). Опциональные расширения (например, `mkdocs-section-index`) подключайте только после установки.
 - При доработке цветовых схем меняйте только `primary`/`accent`, чтобы сохранить единообразие UI.

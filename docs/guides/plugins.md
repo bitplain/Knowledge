@@ -9,7 +9,7 @@
 | `search` | Полнотекстовый поиск с подсветкой | `plugins: \n  - search: {lang: [ru, en]}` | Быстрый поиск по двум языкам, подсказки и подсветка совпадений. |
 | `tags` | Тегирование страниц и авто-страница тегов | `plugins:\n  - tags` | Страницы получают блок тегов и автоматически строится индекс по тегам. |
 | `git-revision-date-localized` | Вывод даты последнего изменения | `plugins:\n  - git-revision-date-localized: {type: datetime}` | Повышает доверие к актуальности материалов. |
-| `section-index` | Поддержка `index.md` в подпапках | `plugins:\n  - section-index` | Кликабельные разделы в боковом меню, аккуратные URL вида `/knowledge/`. |
+| `section-index` (опционально) | Поддержка `index.md` в подпапках | `plugins:\n  - section-index` | Кликабельные разделы в боковом меню, аккуратные URL вида `/knowledge/`. Устанавливайте пакет `mkdocs-section-index` перед включением. |
 
 ## Markdown-расширения
 
@@ -32,9 +32,9 @@
 ```bash
 pip install \
   mkdocs-material \
-  mkdocs-section-index \
   mkdocs-git-revision-date-localized-plugin
 ```
 
 - Для тегов и поиска достаточно базового `mkdocs-material`.
+- Опциональные плагины (например, `mkdocs-section-index`, `mkdocs-glightbox`) подключайте только после установки соответствующих пакетов.
 - После установки прогоняйте `mkdocs build` — так вы поймёте, нет ли пропущенных зависимостей.
