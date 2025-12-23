@@ -44,7 +44,6 @@ plugins:
       enable_creation_date: true
       type: datetime          # отображать дату и время
       fallback_to_build_date: true
-  - glightbox                 # лайтбокс для изображений и видео
   - section-index             # файлы index.md для разделов
 
 markdown_extensions:
@@ -62,8 +61,8 @@ markdown_extensions:
       linenums: true
   - pymdownx.inlinehilite
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -75,11 +74,10 @@ extra_css:
 - **Навигационные фичи:** быстрый переход к разделам, встроенное оглавление и кнопка «наверх» ускоряют скролл длинных страниц.
 - **Поиск:** двуязычный индекс упрощает нахождение терминов на русском и английском. Подсветка совпадений экономит время чтения.
 - **Метаданные Git:** дата изменения помогает отслеживать актуальность материалов и облегчает аудит.
-- **Лайтбокс:** улучшает просмотр иллюстраций без выхода со страницы.
 - **Расширения Markdown:** вкладки, подробности (details) и диаграммы делают документацию более выразительной и компактной.
 
 ## Производительность и поддерживаемость
 
 - Используйте `navigation.instant` и `search.suggest` для ускорения работы на клиенте; при большом количестве страниц регулярно прогоняйте `mkdocs build` для контроля размера итогового бандла.
-- Следите, чтобы указанные плагины были установлены в окружении (`pip install mkdocs-material mkdocs-glightbox mkdocs-section-index mkdocs-git-revision-date-localized-plugin`).
+- Следите, чтобы указанные плагины были установлены в окружении (`pip install mkdocs-material mkdocs-section-index mkdocs-git-revision-date-localized-plugin`).
 - При доработке цветовых схем меняйте только `primary`/`accent`, чтобы сохранить единообразие UI.
